@@ -1,1 +1,390 @@
-abc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Tools - ZenToolo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-light: #6366f1;
+            --primary-dark: #3730a3;
+            --secondary: #10b981;
+            --light-bg: #ffffff;
+            --card-bg: #f8fafc;
+            --border-color: #e2e8f0;
+            --text-dark: #1e293b;
+            --text-medium: #64748b;
+            --gradient-primary: linear-gradient(135deg, #4f46e5, #6366f1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .navbar-brand span {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tool-header {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            padding: 120px 0 60px;
+            margin-top: 80px;
+            border-radius: 0 0 24px 24px;
+        }
+
+        .tool-title {
+            font-size: 3.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .tool-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s;
+            height: 100%;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .tool-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .tool-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .btn-primary-custom {
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 12px;
+            padding: 0.8rem 2rem;
+            font-weight: 700;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+            color: white;
+        }
+
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 5rem;
+        }
+
+        .text-area {
+            min-height: 200px;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            padding: 1.5rem;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .text-area:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+            outline: none;
+        }
+
+        .stats-box {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .tool-title { font-size: 2.5rem; }
+            .tool-header { padding: 100px 0 40px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><span>Zen</span>Toolo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#all-tools">All Tools</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#categories">Categories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="text-tools.html">Text Tools</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="../index.html" class="btn btn-primary-custom">Back to Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- TOOL HEADER -->
+    <section class="tool-header">
+        <div class="container">
+            <h1 class="tool-title">Text Tools</h1>
+            <p class="lead fs-4 text-muted">Comprehensive text processing and analysis tools for writers, students, and professionals.</p>
+        </div>
+    </section>
+
+    <!-- TOOL CONTENT -->
+    <section class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="tool-card mb-4">
+                    <h3 class="mb-4"><i class="bi bi-fonts me-2"></i> Text Analyzer</h3>
+                    <textarea class="form-control text-area mb-4" id="textInput" placeholder="Paste or type your text here...">ZenToolo is your all-in-one online tools platform. We provide 150+ professional tools for productivity, creativity, and development. All tools are completely free to use with no login required. Enjoy enterprise-grade tools with a simple, beautiful interface.</textarea>
+                    
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-3 col-6">
+                            <div class="stats-box">
+                                <div class="stat-number" id="wordCount">0</div>
+                                <div class="text-muted">Words</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stats-box">
+                                <div class="stat-number" id="charCount">0</div>
+                                <div class="text-muted">Characters</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stats-box">
+                                <div class="stat-number" id="sentenceCount">0</div>
+                                <div class="text-muted">Sentences</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="stats-box">
+                                <div class="stat-number" id="paragraphCount">0</div>
+                                <div class="text-muted">Paragraphs</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 flex-wrap">
+                        <button class="btn btn-primary-custom" onclick="analyzeText()">Analyze Text</button>
+                        <button class="btn btn-outline-primary" onclick="convertToUppercase()">UPPERCASE</button>
+                        <button class="btn btn-outline-primary" onclick="convertToLowercase()">lowercase</button>
+                        <button class="btn btn-outline-primary" onclick="clearText()">Clear Text</button>
+                        <button class="btn btn-outline-primary" onclick="copyText()">Copy Text</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="tool-card mb-4">
+                    <h4 class="mb-3"><i class="bi bi-magic me-2"></i> Quick Tools</h4>
+                    <div class="list-group">
+                        <a href="text-tools.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <i class="bi bi-fonts me-3"></i>
+                            <div>
+                                <strong>Text Analyzer</strong>
+                                <small class="d-block text-muted">Word count, character count, and more</small>
+                            </div>
+                        </a>
+                        <a href="grammar-checker.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <i class="bi bi-spellcheck me-3"></i>
+                            <div>
+                                <strong>Grammar Checker</strong>
+                                <small class="d-block text-muted">Check spelling and grammar errors</small>
+                            </div>
+                        </a>
+                        <a href="paraphrase.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <i class="bi bi-arrow-repeat me-3"></i>
+                            <div>
+                                <strong>Paraphrase Tool</strong>
+                                <small class="d-block text-muted">Rewrite text with AI assistance</small>
+                            </div>
+                        </a>
+                        <a href="text-formatter.html" class="list-group-item list-group-item-action d-flex align-items-center">
+                            <i class="bi bi-text-left me-3"></i>
+                            <div>
+                                <strong>Text Formatter</strong>
+                                <small class="d-block text-muted">Format text with styles and layouts</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tool-card">
+                    <h4 class="mb-3"><i class="bi bi-info-circle me-2"></i> About Text Tools</h4>
+                    <p>Our text tools are designed for writers, students, bloggers, and professionals who work with text regularly.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> No registration required</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> 100% secure processing</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Works offline after loading</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Mobile-friendly interface</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RELATED TOOLS -->
+    <section class="container py-5">
+        <h2 class="mb-4">Related Tools</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <a href="grammar-checker.html" class="tool-card">
+                    <div class="tool-icon"><i class="bi bi-spellcheck"></i></div>
+                    <h4>Grammar Checker</h4>
+                    <p>Check spelling, grammar, and punctuation errors in your text</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="paraphrase.html" class="tool-card">
+                    <div class="tool-icon"><i class="bi bi-arrow-repeat"></i></div>
+                    <h4>Paraphrase Tool</h4>
+                    <p>Rewrite text while maintaining the original meaning</p>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="plagiarism-checker.html" class="tool-card">
+                    <div class="tool-icon"><i class="bi bi-search"></i></div>
+                    <h4>Plagiarism Checker</h4>
+                    <p>Check text for duplicate content across the web</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo text-center mb-3" style="font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 900; color: white;">
+                <span style="background: linear-gradient(135deg, #ffffff, #a5b4fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Zen</span>Toolo
+            </div>
+            <div class="footer-links mb-4 text-center">
+                <a href="../index.html" class="text-light mx-3">Home</a>
+                <a href="../index.html#all-tools" class="text-light mx-3">All Tools</a>
+                <a href="../index.html#categories" class="text-light mx-3">Categories</a>
+                <a href="privacy.html" class="text-light mx-3">Privacy</a>
+                <a href="terms.html" class="text-light mx-3">Terms</a>
+            </div>
+            <p class="text-center text-muted mb-0">
+                © 2025 ZenToolo Platform • Professional Online Tools Suite
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Text analysis functions
+        function analyzeText() {
+            const text = document.getElementById('textInput').value;
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const characters = text.length;
+            const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
+            const paragraphs = text.split(/\n+/).filter(para => para.trim().length > 0).length;
+
+            document.getElementById('wordCount').textContent = words.length;
+            document.getElementById('charCount').textContent = characters;
+            document.getElementById('sentenceCount').textContent = sentences;
+            document.getElementById('paragraphCount').textContent = paragraphs;
+        }
+
+        function convertToUppercase() {
+            const textArea = document.getElementById('textInput');
+            textArea.value = textArea.value.toUpperCase();
+            analyzeText();
+        }
+
+        function convertToLowercase() {
+            const textArea = document.getElementById('textInput');
+            textArea.value = textArea.value.toLowerCase();
+            analyzeText();
+        }
+
+        function clearText() {
+            document.getElementById('textInput').value = '';
+            analyzeText();
+        }
+
+        function copyText() {
+            const textArea = document.getElementById('textInput');
+            textArea.select();
+            document.execCommand('copy');
+            alert('Text copied to clipboard!');
+        }
+
+        // Initialize analysis on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            analyzeText();
+            
+            // Update counts as user types
+            document.getElementById('textInput').addEventListener('input', analyzeText);
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    if(this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    if(targetId.startsWith('#')) {
+                        e.preventDefault();
+                        const targetElement = document.querySelector(targetId);
+                        if(targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
